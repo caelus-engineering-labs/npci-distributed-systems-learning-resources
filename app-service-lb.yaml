@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rand-backend-dep
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: rand-backend-pod
+  template:
+    metadata:
+      labels:
+        app: rand-backend-pod
+    spec:
+      containers:
+        - image: vivekanandpv/sb-random-api
+          name: rand-container
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rand-lb
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: rand-backend-pod
+  type: LoadBalancer # also possible: NodePort
+# minikube service rand-lb  -> opens in the browser in LoadBalancer mode
+# minikube service rand-lb --url  -> in NodePort mode
+# use curl to check the load balancing in action
