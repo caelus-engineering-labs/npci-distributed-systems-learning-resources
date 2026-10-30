@@ -1,6 +1,6 @@
 # Code Repositories
 
-Twelve distributed-systems demo projects, each packed into a single `.bundle` file with its full history: every branch, every commit, every tag. You don't need a GitHub account to use them; the bundle *is* the repository.
+Twelve distributed-systems demo projects, each packed into a single `.bundle` file with its full history: every branch, every commit, every tag. You don't need access to the original GitHub repositories, which are private; the bundle *is* the repository.
 
 The projects are listed below from the simplest to the most complex. If you're working through them on your own, go in that order.
 
@@ -72,7 +72,7 @@ git diff main 03-circuit-breaker
 
 ### 5. Follow the project's own README
 
-Open the project's `README.md`. Some of them start with a `git clone https://github.com/...` step: **skip it**, because you already have the code from the bundle. Run the remaining commands from inside the folder you cloned.
+Open the project's `README.md`. Some of them start with a `git clone https://github.com/...` step: **skip it**: you already have the code from the bundle, and those GitHub repositories are private. Run the remaining commands from inside the folder you cloned.
 
 ### Check a bundle (optional)
 
